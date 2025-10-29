@@ -1,0 +1,287 @@
+/* App Layout */
+.App {
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* Header Styling */
+.header {
+  background-color: #ebe5ee;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(224, 117, 117, 0.1);
+}
+
+/* Gradient Brand Title */
+.brandGradient {
+  background: linear-gradient(270deg, #ff6ec4, #7873f5, #ff6ec4);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight: bold;
+  animation: animatedGradient 6s ease infinite;
+}
+
+/* Glowing + Slide-in Animation */
+.animatedHeader {
+  animation: slideInLeft 1.2s ease-out, glowPulse 2s infinite ease-in-out;
+}
+
+/* Main Container */
+.container {
+  background: linear-gradient(to right, #ffecd2, #f8ddf6);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo List Styles */
+.todo-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.todo-item {
+  background: #fff;
+  margin: 0.75rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease;
+  animation: fadeSlideUp 0.6s ease-out;
+}
+
+.todo-item:hover {
+  background: #ffe0ec;
+}
+
+.todo-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #6c3483;
+}
+
+.todo-desc {
+  font-size: 0.9rem;
+  color: #5d6d7e;
+  margin-left: 1rem;
+}
+
+/* Buttons */
+.delete-btn {
+  background: #ff6f61;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #e74c3c;
+  transform: scale(1.05);
+}
+
+.add-btn {
+  background-color: rgb(218, 126, 236);
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: hotpink;
+}
+
+/* Inputs */
+.input-title,
+.input-desc {
+  background-color: #dcf7cd;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.input-title:focus,
+.input-desc:focus {
+  border-color: mediumorchid;
+  outline: none;
+  box-shadow: 0 0 5px rgba(186, 85, 211, 0.4);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  color: #bd3183;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Count Banner */
+.todo-count-banner {
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #ecb6e8;
+  color: #eef8f3;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  max-width: 300px;
+  box-shadow: 0 2 6px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* Calendar */
+.custom-calendar {
+  width: 260px;
+  height: 320px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(to bottom right, #e6bde2, #f9f0ff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+}
+
+.react-calendar__tile {
+  padding: 0.4em 0.2em !important;
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: 0.75rem;
+}
+
+.react-calendar__tile--active {
+  background: #d993db;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.react-calendar__tile:hover {
+  background: #e5a2dd;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Animations */
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideInLeft {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(255, 192, 203, 0.6); }
+  50% { text-shadow: 0 0 16px rgba(255, 105, 180, 0.9); }
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blossomFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes blossomFade {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bloomEffect {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Decorative Cards */
+.mood-card {
+  animation: fadeSlideIn 0.6s ease-out;
+}
+
+.mood-card.pulse {
+  animation: moodPulse 1.2s ease-in-out;
+}
+
+.app-name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  color: #db5eb3;
+  text-shadow: 0 0 6px rgba(255, 200, 255, 0.5);
+  animation: blossomFade 1s ease-out, blossomFloat 3s ease-in-out infinite;
+}
+
+/* Habit Strike (if reused) */
+.calendar-strike {
+  background-color: #b3e5fc;
+  text-decoration: line-through;
+  border-radius: 50%;
+  font-weight: bold;
+  color: #0077b6;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
+}
+
+.streak-bloom {
+  animation: bloomEffect 0.6s ease-in-out;
+  color: #ec6ec7;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(232, 79, 191, 0.6);
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
