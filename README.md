@@ -13,7 +13,7 @@ You can easily add, delete, and manage your daily tasks with a clean and respons
 ## 🖼️ App UI Preview
 
 Here’s how the app looks 👇  
-(Upload your screenshot as todo-ui.png in your project root folder)
+
 
 ![Todo List UI](./todo-ui.png)
 
