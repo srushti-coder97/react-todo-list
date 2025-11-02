@@ -5,7 +5,7 @@ You can easily add, delete, and manage your daily tasks with a clean and respons
 
 ---
 
-## 🚀 Live Preview (Optional)
+## 🚀 Live Preview 
 👉 [Click here to view the app](https://your-live-link-if-any)
 
 ---
